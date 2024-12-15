@@ -22,6 +22,9 @@ const menuSchema = new mongoose.Schema(
     cost: {
         type: Number,
         default: 0
+    },
+    qrcodeUrl: {
+      type: String
     }
   },
   {

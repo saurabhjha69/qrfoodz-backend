@@ -1,13 +1,14 @@
 import QRCode from "qrcode";
-export const createQrCode = (path,menuURL) => {
+
+export const createQrCode = (path, menuURL) => {
   const opts = {
     errorCorrectionLevel: "H",
-    type: "image/png",
-    quality: 0.1,
+    type: "image/jpeg",
+    quality: 0.3,
     margin: 1,
     color: {
-      dark: "#010599FF",
-      light: "#FFBF60FF",
+      dark: "#010599FF",  // QR code color
+      light: "#ffffff",   // Solid white background
     },
   };
 
@@ -15,5 +16,5 @@ export const createQrCode = (path,menuURL) => {
     if (error) throw new Error(error);
   });
 
-  return null
+  return null;
 };
